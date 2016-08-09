@@ -1,0 +1,41 @@
+#include <iostream.h>
+#include <conio.h>
+
+int main (void)
+{
+	
+ int array[6];
+ int length=6;
+ int i,d;
+ int tmp, flag;
+ 
+for (i=0;i<length;i++)
+
+ {
+ cout<<"Enter a number :";
+ cin>>array[i];
+ }
+d=length;
+ flag=i;
+
+ while(flag||(d>1))
+ {
+ flag=0;
+ d=(d+1)/2;
+ for(i=0;i<(length-d);i++)
+ {
+ if(array [i+d]>array[i])
+ {
+ tmp=array[i+d];
+ array[i+d]=array[i];
+ array[i]=tmp;
+ flag=1;
+ }
+ }
+ }
+for(i=0;i<6;i++)
+ {
+ cout<<array[i]<<endl;
+ }
+ getche();
+}
